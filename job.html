@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Job Offers</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body class="page-job">
+  <!-- Üst Kısım / Purple Bar -->
+  <header class="purple-bar">
+    <button onclick="window.location='portfolio.html'">Back</button>
+    <span class="step-title">Job Offers</span>
+    <button onclick="window.location='extra-step5.html'">Next</button>
+  </header>
+
+  <!-- Ana İçerik Kısmı -->
+  <main class="step-content">
+
+    <!-- Yarı saydam kaplama için content-container kullandık -->
+    <div class="content-container">
+      <h2>Select a State to View Job Offers</h2>
+
+      <!-- Dropdown to select state -->
+      <select id="stateSelect" onchange="filterJobsByState()">
+        <option value="all">Select a State</option>
+        <option value="New York">New York</option>
+        <option value="Miami">Miami</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="San Francisco">San Francisco</option>
+      </select>
+
+      <!-- Container for Job Offers -->
+      <div id="jobOffers">
+        <!-- Job offers will be dynamically inserted here by script.js -->
+      </div>
+    </div>
+    <!-- /.content-container -->
+
+  </main>
+
+  <!-- JS Dosyası -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

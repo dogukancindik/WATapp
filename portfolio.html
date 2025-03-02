@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Portfolio and Agencies</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body class="page-portfolio">
+  <header class="purple-bar">
+    <button onclick="window.location='extra-step4.html'">Back</button>
+    <span class="step-title">My Portfolio</span>
+    <button onclick="window.location='job.html'" class="next-btn">Next</button>
+  </header>
+
+  <main class="step-content">
+    <!-- Portfolio Data Section -->
+    <div id="portfolioData">
+      <h2>CV / Portfolio</h2>
+
+      <div class="cv-header">
+        <!-- Placeholder user image, or you can let the user upload in the future -->
+        <img src="images/10.png" alt="User Photo" width="50%">
+        <div>
+          <p style="margin-bottom:0.3rem;"><strong>Full Name:</strong> <span id="pAdSoyad"></span></p>
+          <p><strong>Email:</strong> <span id="pMail"></span></p>
+        </div>
+      </div>
+
+      <p><strong>Phone Number:</strong> <span id="pPhone"></span></p>
+      <p><strong>Age Range:</strong> <span id="pYas"></span></p>
+      <p><strong>Bank Account Range (USD):</strong> <span id="pBanka"></span></p>
+      <p><strong>GPA Range:</strong> <span id="pNotOrt"></span></p>
+      <p><strong>University Year:</strong> <span id="pSinif"></span></p>
+      <p><strong>Country of Application:</strong> <span id="pUlke"></span></p>
+      <p><strong>University:</strong> <span id="pUniName"></span></p>
+      <p><strong>English Level:</strong> <span id="pIngSeviye"></span></p>
+      <p><strong>Previously Held Any Visa?:</strong> <span id="pVizeAldi"></span></p>
+      <p><strong>Any Visa Rejections (3 yrs)?:</strong> <span id="pVizeRed"></span></p>
+    </div>
+
+    <button class="pdf-btn" onclick="downloadPDF()">Download as PDF</button>
+
+    <hr/>
+
+
+    <!-- Agencies Section -->
+    <h3>Agencies</h3>
+    <p>Please select the agency you want to submit your details to:</p>
+
+    <div class="agencies-container">
+      <div class="agency-card purple-card">
+        <h4>Izmir Agency</h4>
+        <p>Address: Konak, Izmir</p>
+        <p>Phone: +90 (232) 123 45 67</p>
+        <p>Email: izmir@agency.com</p>
+        <button onclick="sendToAgency('Izmir Agency')">Send</button>
+      </div>
+
+      <div class="agency-card blue-card">
+        <h4>Ankara Agency</h4>
+        <p>Address: Kizilay, Ankara</p>
+        <p>Phone: +90 (312) 987 65 43</p>
+        <p>Email: ankara@agency.com</p>
+        <button onclick="sendToAgency('Ankara Agency')">Send</button>
+      </div>
+
+      <div class="agency-card green-card">
+        <h4>Istanbul Agency</h4>
+        <p>Address: Taksim, Istanbul</p>
+        <p>Phone: +90 (212) 345 67 89</p>
+        <p>Email: istanbul@agency.com</p>
+        <button onclick="sendToAgency('Istanbul Agency')">Send</button>
+      </div>
+
+      <div class="agency-card red-card">
+        <h4>Bursa Agency</h4>
+        <p>Address: Osmangazi, Bursa</p>
+        <p>Phone: +90 (224) 555 77 88</p>
+        <p>Email: bursa@agency.com</p>
+        <button onclick="sendToAgency('Bursa Agency')">Send</button>
+      </div>
+    </div>
+
+    <p id="agencyMsg" style="color:green; font-weight:bold; margin-top:1rem;"></p>
+
+  </main>
+
+
+
+
+  <!-- Kendi JS dosyan -->
+<script src="js/script.js"></script>
+
+<!-- (Eğer istersen şurada da ek debug vs. kodlar olabilir) -->
+<script>
+  // Örnek downloadPDF fonksiyonu (script.js içinde override edeceğiz dersen kaldırabilirsin)
+  function downloadPDF() {
+    const element = document.getElementById('portfolioData');
+    const options = {
+      margin: 0.5,
+      filename: 'Portfolio.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+    html2pdf().from(element).set(options).save();
+  }
+</script>
+</body>
+</html>
+
+
+
+

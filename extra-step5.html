@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work and Travel - Job Details</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-extra">
+  <header class="purple-bar">
+    <button onclick="window.location='job.html'">Back</button>
+    <span class="step-title">Job Details</span>
+    <button onclick="nextStep()">Next</button>
+  </header>
+
+  <main class="step-content">
+    <h2>Job Details</h2>
+    <div id="jobDetail">
+      <!-- İş detayları burada yüklenecek -->
+    </div>
+    <p id="welcomeMessage"></p>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script>
+    // URL'den "state" parametresini almak
+    const params = new URLSearchParams(window.location.search);
+    let selectedState = params.get('state') || 'New York'; // Default olarak "New York" kullan
+
+    // "selectedState" dinamik olarak yerleştiriliyor
+    document.getElementById('welcomeMessage').textContent = `Welcome to ${selectedState}!`;
+
+    // Sonraki adımda eyalet bilgisi ile yönlendirme
+    function nextStep() {
+      if (selectedState) {
+        window.location.href = `extra-step6.html?state=${selectedState}`;
+      } else {
+        alert('Please select a state!');
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

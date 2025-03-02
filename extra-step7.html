@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visa Interview Questions</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body class="page-visa">
+  <header class="purple-bar">
+    <button onclick="window.location='extra-step6.html'">Back</button>
+    <span class="step-title">Visa Interview Questions</span>
+    <button onclick="window.location='home.html'">Home</button>
+  </header>
+
+  <main class="step-content">
+    <div class="content-container">
+      <h2>Common Visa Interview Questions</h2>
+      <div class="question-list">
+        <div class="question">
+          <strong>1. Why do you want to go to the United States?</strong>
+          <p class="answer" style="display: none;">To experience American culture, improve my English, and gain international work experience.</p>
+        </div>
+
+        <div class="question">
+          <strong>2. Have you traveled abroad before?</strong>
+          <p class="answer" style="display: none;">Yes/No. If yes, provide a brief explanation.</p>
+        </div>
+
+        <div class="question">
+          <strong>3. Why did you choose the Work and Travel program?</strong>
+          <p class="answer" style="display: none;">This program allows me to work and travel, explore new cultures, and build an international network.</p>
+        </div>
+
+        <div class="question">
+          <strong>4. How will you fund your trip?</strong>
+          <p class="answer" style="display: none;">I have savings and financial support from my family to cover all expenses.</p>
+        </div>
+
+        <div class="question">
+          <strong>5. Where will you stay in the United States?</strong>
+          <p class="answer" style="display: none;">I have arranged accommodation through the program or will stay at a pre-arranged location.</p>
+        </div>
+
+        <div class="question">
+          <strong>6. What will you do after returning from the United States?</strong>
+          <p class="answer" style="display: none;">I will continue my studies and share my experiences with peers.</p>
+        </div>
+
+        <div class="question">
+          <strong>7. How does this program align with your career goals?</strong>
+          <p class="answer" style="display: none;">This program will help me gain international experience and improve my skills, which are essential for my future career.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.querySelector('.answer');
+          answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

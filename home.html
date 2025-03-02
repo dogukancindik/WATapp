@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="home-page">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>WATapp - Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body class="home-page" onload="checkAuth()">
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo" onclick="window.location='home.html'">
+      WATapp
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="what-is-work-and-travel.html">What is Work and Travel?</a></li>
+        <li><a href="work-and-travel-requirements.html">Work and Travel Requirements</a></li>
+        <li><a href="job-types-and-earnings.html">Job Types and Earnings</a></li>
+        <li><a href="why-work-and-travel.html">Why Work and Travel?</a></li>
+        <li><a href="job-types-list.html">Job Types and Job List</a></li>
+        <li><a href="accommodation-meals.html">Accommodation &amp; Meals</a></li>
+      </ul>
+    </nav>
+    <button class="logout-btn" onclick="logoutUser()">Logout</button>
+  </header>
+
+  <div class="home-content">
+    <img src="images/5.png" alt="Home Visual" class="home-visual">
+
+    <h2>Welcome!</h2>
+    <p>
+      WATapp provides comprehensive Work and Travel programs for students. 
+      Use the menu above to explore each section.
+    </p>
+
+    <hr/>
+
+    <!-- Purple Card CTA -->
+    <div class="purple-card-home">
+      <div>
+        <h3>Create Your Personal Portfolio &amp; Calculate Your WAT Score</h3>
+        <p>
+          Fill out the step-by-step form to build your CV/Portfolio 
+          and find out your Work and Travel eligibility score!
+        </p>
+        <button onclick="window.location='extra-step1.html'">
+          Get Started
+        </button>
+      </div>
+      <img src="images/6.png" alt="Form Illustration">
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

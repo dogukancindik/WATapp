@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Detail</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body class="page-job-detail">
+  <header class="purple-bar">
+    <button onclick="window.location='job.html'">Back</button>
+    <span class="step-title">Job Detail</span>
+  </header>
+
+  <main class="step-content" id="jobDetail">
+    <h3>Job Details</h3>
+    <p><strong>Job Title:</strong> Retail Assistant</p>
+    <p><strong>Salary:</strong> $14 per hour</p>
+    <p><strong>Working Hours:</strong> 40 hours per week</p>
+
+    <h3>Rating</h3>
+    <div id="rating">
+      <span class="star" data-rating="1">★</span>
+      <span class="star" data-rating="2">★</span>
+      <span class="star" data-rating="3">★</span>
+      <span class="star" data-rating="4">★</span>
+      <span class="star" data-rating="5">★</span>
+    </div>
+
+    <h3>User Reviews</h3>
+    <div id="reviewsContainer">
+      <div class="review">
+        <p><strong>John Doe:</strong> This job was great! The pay was good, and the hours were flexible. Highly recommend!</p>
+        <p>Rating: <span class="stars" data-rating="4"></span></p>
+      </div>
+      <div class="review">
+        <p><strong>Jane Smith:</strong> Not a bad job, but the shifts were a bit too long for my liking.</p>
+        <p>Rating: <span class="stars" data-rating="3"></span></p>
+      </div>
+      <div class="review">
+        <p><strong>Emily Davis:</strong> Great opportunity to learn new skills, but the management was a bit unorganized.</p>
+        <p>Rating: <span class="stars" data-rating="3"></span></p>
+      </div>
+    </div>
+
+    <h3>Leave a Review</h3>
+    <form id="reviewForm">
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" required>
+
+      <label for="reviewText">Your Review:</label>
+      <textarea id="reviewText" required></textarea>
+
+      <label for="reviewRating">Rating:</label>
+      <select id="reviewRating">
+        <option value="1">1 Star</option>
+        <option value="2">2 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="5">5 Stars</option>
+      </select>
+
+      <button type="submit">Submit Review</button>
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

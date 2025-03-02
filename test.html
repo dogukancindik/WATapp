@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML2PDF Test</title>
+  <!-- html2pdf.js CDN (integrity kaldırıldı) -->
+  <script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+  </script>
+</head>
+<body>
+  <div id="content">
+    <h1>Test PDF Oluşturma</h1>
+    <p>Bu bir test paragrafıdır.</p>
+  </div>
+  <button onclick="generatePDF()">PDF Oluştur</button>
+
+  <script>
+    function generatePDF() {
+      const element = document.getElementById('content');
+      const options = {
+        margin:       0.5,
+        filename:     'TestPDF.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(options).save();
+    }
+  </script>
+</body>
+</html>

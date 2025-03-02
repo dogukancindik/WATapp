@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>WAT Questionnaire</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body class="page-extra">
+  <header class="purple-bar">
+    <button onclick="window.location='extra-step2.html'">Back</button>
+    <span class="step-title">Questions</span>
+    <button onclick="calculateScore()">Next</button>
+  </header>
+
+  <main class="step-content">
+    <form id="watForm">
+      <div class="form-group">
+        <label for="q1AdSoyad">1. Full Name:</label>
+        <input type="text" id="q1AdSoyad" placeholder="Enter your full name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="q2Mail">2. Email Address:</label>
+        <input type="email" id="q2Mail" placeholder="example@mail.com"/>
+      </div>
+
+      <div class="form-group">
+        <label for="q3Phone">3. Phone Number:</label>
+        <input type="tel" id="q3Phone" placeholder="+1 (000) 000 0000"/>
+      </div>
+
+      <hr/>
+
+      <!-- Age -->
+      <h3>What is your age?</h3>
+      <p>(18-20 → 10 pts, 21-23 → 6 pts, 24-26 → 2 pts)</p>
+      <label><input type="radio" name="yas" value="10"> 18-20</label><br/>
+      <label><input type="radio" name="yas" value="6"> 21-23</label><br/>
+      <label><input type="radio" name="yas" value="2"> 24-26</label><br/>
+
+      <hr/>
+
+      <!-- Bank -->
+      <h3>How much do you have in your bank account (USD)?</h3>
+      <p>0-1000 → 2pts, 1000-2000 → 4pts, 2000-3000 → 6pts, 3000-4000 → 8pts, 4000-5000 → 10pts</p>
+      <label><input type="radio" name="banka" value="2"> 0-1000</label><br/>
+      <label><input type="radio" name="banka" value="4"> 1000-2000</label><br/>
+      <label><input type="radio" name="banka" value="6"> 2000-3000</label><br/>
+      <label><input type="radio" name="banka" value="8"> 3000-4000</label><br/>
+      <label><input type="radio" name="banka" value="10"> 4000-5000</label><br/>
+
+      <hr/>
+
+      <!-- GPA -->
+      <h3>What is your GPA?</h3>
+      <p>0-2.00 → 2pts, 2.00-2.50 → 4pts, 2.50-3.00 → 6pts, 3.00-3.50 → 8pts, 3.50-4.00 → 10pts</p>
+      <label><input type="radio" name="notOrt" value="2"> 0-2.00</label><br/>
+      <label><input type="radio" name="notOrt" value="4"> 2.00-2.50</label><br/>
+      <label><input type="radio" name="notOrt" value="6"> 2.50-3.00</label><br/>
+      <label><input type="radio" name="notOrt" value="8"> 3.00-3.50</label><br/>
+      <label><input type="radio" name="notOrt" value="10"> 3.50-4.00</label><br/>
+
+      <hr/>
+
+      <!-- Class -->
+      <h3>Which year are you in university?</h3>
+      <p>Prep → 10pts, 1st year → 8pts, 2nd year → 6pts, 3rd year → 4pts, 4th year → 0pts</p>
+      <label><input type="radio" name="sinif" value="10"> Prep</label><br/>
+      <label><input type="radio" name="sinif" value="8"> 1st Year</label><br/>
+      <label><input type="radio" name="sinif" value="6"> 2nd Year</label><br/>
+      <label><input type="radio" name="sinif" value="4"> 3rd Year</label><br/>
+      <label><input type="radio" name="sinif" value="0"> 4th Year</label><br/>
+
+      <hr/>
+
+      <!-- Country -->
+      <h3>Which country are you applying from?</h3>
+      <p>Poland/Romania → 10pts; Jamaica/Brazil/Thailand → 8pts; Philippines/Indonesia → 6pts; Turkey → 4pts; China/Russia → 2pts</p>
+      <label><input type="radio" name="ulke" value="10"> Poland / Romania</label><br/>
+      <label><input type="radio" name="ulke" value="8"> Jamaica / Brazil / Thailand</label><br/>
+      <label><input type="radio" name="ulke" value="6"> Philippines / Indonesia</label><br/>
+      <label><input type="radio" name="ulke" value="4"> Turkey</label><br/>
+      <label><input type="radio" name="ulke" value="2"> China / Russia</label><br/>
+
+      <div class="form-group">
+        <label for="q8UniName">8. Which university do you study at?</label>
+        <input type="text" id="q8UniName" placeholder="University Name...">
+      </div>
+
+      <hr/>
+
+      <!-- English Level -->
+      <h3>What is your English level?</h3>
+      <p>
+        Beginner (A1) → 1pt, Elementary (A2) → 2pts, Pre-Intermediate (B1) → 3pts, 
+        Intermediate (B1+) → 4pts, Upper Intermediate (B2) → 6pts, Advanced (C1) → 8pts,
+        Proficiency (C2) → 10pts
+      </p>
+      <label><input type="radio" name="ingSeviye" value="1"> Beginner (A1)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="2"> Elementary (A2)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="3"> Pre-Intermediate (B1)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="4"> Intermediate (B1+)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="6"> Upper Intermediate (B2)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="8"> Advanced (C1)</label><br/>
+      <label><input type="radio" name="ingSeviye" value="10"> Proficiency (C2)</label><br/>
+
+      <hr/>
+
+      <!-- Previous Visa -->
+      <h3>Have you ever received a visa from another country before?</h3>
+      <label><input type="radio" name="vizeAldi" value="10"> Yes</label><br/>
+      <label><input type="radio" name="vizeAldi" value="0"> No</label><br/>
+
+      <hr/>
+
+      <!-- Visa Rejection -->
+      <h3>Have you been rejected for a visa in the last 3 years?</h3>
+      <label><input type="radio" name="vizeRed" value="10"> Yes</label><br/>
+      <label><input type="radio" name="vizeRed" value="0"> No</label><br/>
+
+    </form>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
